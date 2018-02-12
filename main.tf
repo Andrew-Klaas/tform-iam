@@ -8,16 +8,17 @@ resource "aws_iam_policy" "policy" {
 
   policy = <<EOF
 {
-  "Version": "2012-10-17",
-  "Statement": [
+   "Version": "2012-10-17",
+   "Statement": [{
+      "Effect":"Allow",
+      "Action":["ec2:*"],
+      "Resource":"*"
+    },
     {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
+      "Effect":"Allow",
+      "Action":"iam:PassRole",
+      "Resource":"*"
+    }]
 }
 EOF
 }
