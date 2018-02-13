@@ -12,13 +12,15 @@ resource "aws_iam_policy" "policy" {
    "Statement": [{
       "Effect":"Allow",
       "Action":["ec2:*"],
-      "Resource":"arn:aws:iam:::role/*"
+      "Resource":"*"
     },
     {
       "Effect":"Allow",
       "Action":"iam:PassRole",
-      "Resource":"*"
+      "Resource":"arn:aws:iam:::role/*"
     }]
 }
 EOF
 }
+
+
