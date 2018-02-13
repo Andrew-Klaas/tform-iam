@@ -17,7 +17,7 @@ resource "aws_iam_policy" "policy" {
     {
       "Effect":"Allow",
       "Action":"iam:PassRole",
-      "Resource":"arn:aws:iam:::role/*"
+      "Resource":"arn:aws:iam:::role/"
     }]
 }
 EOF
